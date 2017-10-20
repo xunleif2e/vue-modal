@@ -10,7 +10,7 @@
       v-model="showModal1"
     >
       <div style="position: relative;">
-        <iframe src="http://xunlei.com" width="700" height="320" frameborder="0"></iframe>
+        <iframe src="https://red.xunlei.com" width="700" height="400" frameborder="0"></iframe>
         <h2 style="position: absolute; bottom: 5px; width: 100%;">click backdrop to close</h2>
       </div>
     </vue-modal>
@@ -26,7 +26,7 @@
       :backdrop="false"
     >
       <div class="modal-2">
-        <iframe src="http://red.xunlei.com/" width="320" height="500" frameborder="0"></iframe>
+        <iframe src="https://red.xunlei.com/" width="320" height="500" frameborder="0"></iframe>
         <MdButton
           @click.native="showModal2 = false"
           class="red"
@@ -48,7 +48,7 @@
       :timeout="2000"
     >
       <h3>Hi, this modal will hide in 2 seconds.</h3>
-      <iframe src="http://m.seniverse.com/city/CHGD050000" width="360" height="310" frameborder="0"></iframe>
+      <iframe src="https://m.seniverse.com/city/CHGD050000" width="360" height="310" frameborder="0"></iframe>
     </vue-modal>
 
     <MdButton
