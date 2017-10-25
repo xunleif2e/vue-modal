@@ -41,12 +41,7 @@
 
     watch: {
       'value' (val) {
-        if (val) {
-          this.$emit('show')
-          this.showHandler()
-        } else {
-          this.$emit('hide')
-        }
+        this.init(val)
       }
     },
 
@@ -63,7 +58,7 @@
           if ($input) {
             $input.focus()
           } else {
-            this.$el.focus()
+            this.$el && this.$el.focus()
           }
 
           if (this.timeout) {
@@ -80,11 +75,20 @@
 
       clickBackdrop () {
         this.close()
+      },
+
+      init (show) {
+        if (show) {
+          this.$emit('show')
+          this.showHandler()
+        } else {
+          this.$emit('hide')
+        }
       }
     },
 
     created () {
-      this.showHandler()
+      this.init(this.value)
     }
   }
 </script>
