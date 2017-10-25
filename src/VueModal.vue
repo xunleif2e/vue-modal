@@ -59,7 +59,7 @@
         clearTimeout(this.timer)
 
         this.$nextTick(() => {
-          let $input = this.$el.querySelector('input')
+          let $input = this.$el && this.$el.querySelector('input')
           if ($input) {
             $input.focus()
           } else {
